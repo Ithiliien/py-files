@@ -1,6 +1,7 @@
 def readFile(name):
   # return file
   return ""
+print("-----")
 
 def wordCount(text):
   # return count
