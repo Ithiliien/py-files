@@ -1,16 +1,23 @@
 def readFile(name):
-  # return file
-  return ""
-print("-----")
+  with open(name, "r", errors="ignore") as file:
+    return file.read()
+ 
 
 def wordCount(text):
-  # return count
-  return 0
+  contador = text.split()
+  contador= len(contador)
+  return contador
 
 def uniqueWordCount(text):
-  # return count
-  return 0
+    palabra = text.split()
+    contador_palabra = len(set(palabra))
+    return contador_palabra
 
 def findContent(text, word):
-  # return count
-  return 0
+    palabras = text.split()
+    contador_letra = palabras.count(word.lower())#.lower convierte todas las palabras a minusculas.
+    return contador_letra
+
+def changeQuijoteToQuixote(text):
+    cambia_letra_quijote = text.replace("Quijote", "Quixote") #.replace sirve para remplazar una palabra por otra(primero se pone la original y luego la que queremos cambiar)
+    return cambia_letra_quijote
